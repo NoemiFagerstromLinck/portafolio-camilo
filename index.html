@@ -289,8 +289,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 35vw;
-      height: 50vh;
+      width: 50vw;
+      aspect-ratio: 16 / 9;
+      height: auto;
       overflow: hidden;
       z-index: 5;
     }
@@ -298,13 +299,24 @@
     .hero-image {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transform: scale(1.3);
+      object-fit: contain;
+      transform: none;
       filter: grayscale(20%);
     }
 
     .hero-scroll {
-      display: none;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .hero-scroll-line {
@@ -987,7 +999,8 @@
 
       .hero-image-container {
         width: 70vw;
-        height: 50vh;
+        aspect-ratio: 16 / 9;
+        height: auto;
       }
 
       .studio {
@@ -1076,9 +1089,10 @@
       }
 
       .hero-image-container {
-        width: 70vw;
-        height: 30vh;
-        top: 40%;
+        width: 85vw;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        top: 50%;
       }
 
       .footer-grid {
